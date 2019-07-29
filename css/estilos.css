@@ -1,0 +1,75 @@
+#Contenido{
+  background-color: #02010a;
+  width: 900px;
+  display: block;
+  margin: 0 auto;
+}
+#Encabezado{
+  height: 100px;
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  display: flex;
+}
+#Encabezado .Titulo{
+  height: 90px;
+  background-color: orange;
+  flex-grow: 3;
+}
+#Encabezado .Menu{
+  height: 90px;
+  background-color: white;
+  flex-grow: 1;
+}
+#Cuerpo{
+  height: 900px;
+  background-color: green;
+}
+#Img_Central{
+  height: 500px;
+  background-color: #82c3a6;
+}
+#Img_Secundaria{
+  height: 400px;
+  background-color: #d5c75f;
+  display: flex;
+}
+#Img_Secundaria .Img_Izquierda{
+  height: 150px;
+  background-color: red;
+  flex-grow: 1;
+}
+#Img_Secundaria .Img_Derecha{
+  height: 150px;
+  background-color: purple;
+  flex-grow: 1;
+}
+#Pie{
+  height: 100px;
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  display: flex;
+}
+#Pie .Contactos{
+  height: 90px;
+  background-color: red;
+  flex-grow: 1;
+}
+#Pie .Terminos{
+  height: 90px;
+  background-color: green;
+  flex-grow: 1;
+}
+#Pie .Redes_Sociales{
+  height: 90px;
+  background-color: blue;
+  flex-grow: 1;
+}
+#Pie .Derechos{
+  height: 90px;
+  background-color: gray;
+  flex-grow: 1;
+}
