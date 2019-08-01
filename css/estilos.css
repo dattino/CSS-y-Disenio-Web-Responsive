@@ -4,10 +4,11 @@
 img{
   box-shadow: 2px 2px #02010a;
 }
+h1{
+  font-size: 2em;
+}
 #Contenido{
   background-color: #02010a;
-  width: 900px;
-  display: block;
   margin: 0 auto;
   animation: mianimacion 3s;
 }
@@ -16,91 +17,80 @@ img{
   border-radius: 10px 10px 0px 0px;
   -moz-border-radius: 10px 10px 0px 0px;
   -webkit-border-radius: 10px 10px 0px 0px;
-  display: flex;
   padding: 30px;
 }
 #Encabezado .Titulo{
-  height: 90px;
-  background-color: orange;
-  flex-grow: 3;
-  padding: 30px;
+  color: white;
+  text-shadow: 2px 2px #02010a;
 }
 #Encabezado .Menu{
-  height: 90px;
-  background-color: white;
-  flex-grow: 1;
+  font-size: 1.5em;
+  word-spacing: 1em;
   padding: 30px;
 }
-#Cuerpo{
-  background-color: cyan;
-  padding: 30px;
+#Encabezado .Menu a{
+  color: white;
+}
+#Encabezado .Menu a.active{
+  text-decoration: none;
+}
+#Cuerpo a{
+  color: black;
+  text-decoration: underline;
 }
 #Img_Central{
-  height: 500px;
   background-color: #82c3a6;
   padding: 30px;
 }
 #Img_Secundaria{
   background-color: #d5c75f;
-  display: flex;
-  padding: 30px;
-  border: 1px solid black;
+  text-align: center;
 }
+#Img_Secundaria img{
+border: 1px solid;
+}
+
 #Img_Secundaria .Img_Izquierda{
-  height: 150px;
-  background-color: red;
-  flex-grow: 1;
-}
-#Img_Secundaria .Img_Izquierda:hover{
-  color: blue;
-  transform: rotatez(-10deg);
-  box-shadow:  2px 2px #82c3a6;
-  border: 2px solid;
-  transition: transform 1s;
+  padding: 30px;
+
 }
 #Img_Secundaria .Img_Derecha{
-  height: 150px;
-  background-color: purple;
-  flex-grow: 1;
+  padding: 30px;
 }
-#Img_Secundaria .Img_Derecha:hover{
-  transform: translate(20px, -5px);
+#Img_Secundaria .Img_Izquierda img:hover{
+  transform: rotatez(10deg);
   box-shadow:  2px 2px #82c3a6;
-  border: 2px solid;
   transition: transform 1s;
 }
+#Img_Secundaria .Img_Derecha img:hover{
+  transform: translate(20px, -5px);
+  box-shadow:  2px 2px #82c3a6;
+  transition: transform 1s;
+}
+
 #Pie{
   background-color: #C6d5c5;
   border-radius: 0px 0px 10px 10px;
   -moz-border-radius: 0px 0px 10px 10px;
   -webkit-border-radius: 0px 0px 10px 10px;
-  display: flex;
   padding: 30px;
 }
-#Pie .Contactos{
-  height: 90px;
-  background-color: red;
-  flex-grow: 1;
-  padding: 30px;
+#Pie a[href]{
+  color: black;
+  text-decoration: none;
 }
-#Pie .Terminos{
-  height: 90px;
-  background-color: green;
-  flex-grow: 1;
-  padding: 30px;
+#Pie p {
+  text-indent: 5px;
 }
-#Pie .Redes_Sociales{
-  height: 90px;
-  background-color: blue;
-  flex-grow: 1;
-  padding: 30px;
+#Pie img{
+  align: center;
 }
-#Pie .Derechos{
-  height: 90px;
-  background-color: gray;
-  flex-grow: 1;
-  padding: 30px;
+
+#Pie .Redes_Sociales a{
+  align: center;
 }
+
+
 @-webkit-keyframes mianimacion{
   0%{
     transform: translate(0%, 100%);
@@ -108,13 +98,12 @@ img{
   60%{
   transform: translate(0%, -5%);
   }
-100%{
-  transform: translate(none);
-}
+  100%{
+    transform: translate(none);
+  }
 }
 
-
-@media (max-width: 900px){
+@media (max-width: 899px){
   #Contenido{
     width: 100%;
   }
@@ -128,17 +117,18 @@ img{
     text-align: center;
   }
   #Img_Secundaria{
-    background-color: #d5c75f;
     display: block;
+    text-align: center;
+  }
+  #Img_Secundaria [class|="Img_"]{
     padding: 30px;
   }
-
   #Pie{
     display: block;
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 900px) {
   #Contenido{
     width: 900px;
   }
@@ -147,14 +137,38 @@ img{
   }
   #Encabezado .Titulo{
     text-align: left;
+    flex-grow: 2;
   }
   #Encabezado .Menu{
     text-align: right;
+    flex-grow: 1;
   }
   #Img_Secundaria{
     display: flex;
+    flex-flow: row nowrap;
+  }
+  .Img_Izquierda{
+    width: 50%;
+    flex-grow: 1;
+  }
+  .Img_Derecha{
+    width: 50%;
+    flex-grow: 1;
   }
   #Pie{
     display: flex;
+    flex-flow: row nowrap;
+  }
+  #Pie .Contactos{
+    flex-grow: 1;
+  }
+  #Pie .Terminos{
+    flex-grow: 1;
+  }
+  #Pie .Redes_Sociales{
+    flex-grow: 1;
+  }
+  #Pie .Derechos{
+    flex-grow: 1;
   }
 }
