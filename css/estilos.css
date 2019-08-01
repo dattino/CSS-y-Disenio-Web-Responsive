@@ -24,8 +24,8 @@ h1{
   text-shadow: 2px 2px #02010a;
 }
 #Encabezado .Menu{
-  font-size: 1.5em;
-  word-spacing: 1em;
+  font-size: 1.2em;
+  word-spacing: .5em;
   padding: 30px;
 }
 #Encabezado .Menu a{
